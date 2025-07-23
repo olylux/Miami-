@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">OLYLUX</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mens.html">Men</a></li>
+        <li><a href="womens.html">Women</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="active">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h1>Your Cart</h1>
+
+    <div class="cart-items">
+      <!-- Sample Cart Item -->
+      <div class="cart-row">
+        <div class="cart-item cart-column">
+          <img class="cart-item-image" src="img/sample-product.jpg" width="100" height="100" alt="Item" />
+          <span class="cart-item-title">Sample T-shirt</span>
+        </div>
+        <span class="cart-price cart-column">₦7,500</span>
+        <div class="cart-quantity cart-column">
+          <input class="cart-quantity-input" type="number" value="1" />
+          <button class="btn btn-remove">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-total">
+      <strong>Total: </strong><span class="cart-total-price">₦0</span>
+    </div>
+
+    <div class="cart-checkout">
+      <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux Clothing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
