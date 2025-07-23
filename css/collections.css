@@ -1,0 +1,15 @@
+/* collections.css */
+.collections {
+  padding: 20px;
+}
+
+.collections h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
