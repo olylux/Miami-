@@ -99,3 +99,49 @@ if (productSection) {
     productSection.appendChild(div);
   });
 }
+
+// =============================
+// HERO BANNER SLIDER FUNCTION
+// =============================
+let currentSlide = 0; // Start with first slide
+const slides = document.querySelectorAll(".slider-wrapper .slide");
+const wrapper = document.getElementById("sliderWrapper");
+
+// Update the slider position
+function updateSlidePosition() {
+  wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Show next slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlidePosition();
+}
+
+// Show previous slide
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlidePosition();
+}
+
+// =============================
+// AUTO SLIDE FUNCTION
+// =============================
+setInterval(() => {
+  nextSlide();
+}, 4000); // Change every 4 seconds
+
+// =============================
+// SWIPE SUPPORT FOR TOUCH
+// =============================
+let startX = 0;
+
+wrapper.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener("touchend", (e) => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) nextSlide();      // Swipe left
+  else if (endX - startX > 50) prevSlide(); // Swipe right
+});
