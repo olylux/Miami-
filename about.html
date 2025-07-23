@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">OLYLUX</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main class="about-section">
+    <div class="about-banner">
+      <h1>About OLYLUX</h1>
+      <p>Bold • Stylish • Authentic</p>
+    </div>
+
+    <section class="about-content">
+      <h2>Our Story</h2>
+      <p>
+        OLYLUX is a bold Nigerian clothing brand redefining modern street fashion
+        with quality, originality, and luxury. From casual fits to trendsetting pieces,
+        our collections are designed for kings and queens who express themselves unapologetically.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        To become a global fashion icon from Africa, blending tradition and trend to inspire confidence and culture.
+      </p>
+
+      <h2>Our Mission</h2>
+      <ul>
+        <li>Deliver premium fashion with bold designs</li>
+        <li>Empower self-expression through style</li>
+        <li>Serve quality at affordable luxury</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Olylux. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
