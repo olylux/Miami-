@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Fit Tee – OLYLUX</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">OLYLUX</div>
+    <nav>
+      <div class="menu-icon">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Men's Wear</a></li>
+        <li><a href="#">Women's Wear</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sales</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="search-cart">
+        <input type="text" placeholder="Search..."/>
+        <img src="assets/icons/search.svg" />
+        <a href="cart.html"><img src="assets/icons/cart.svg" /></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAILS -->
+  <section class="product-detail">
+    <div class="product-images">
+      <img src="images/product1.jpg" alt="Urban Fit Tee"/>
+    </div>
+    <div class="product-info">
+      <h1>Urban Fit Tee</h1>
+      <p class="short-desc">A stylish, comfortable cotton tee for everyday wear.</p>
+      <p class="price">₦8,500</p>
+
+      <!-- Size Options -->
+      <div class="options">
+        <label>Size:</label>
+        <select>
+          <option>Select</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </div>
+
+      <!-- Color Options -->
+      <div class="options">
+        <label>Color:</label>
+        <select>
+          <option>Select</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Blue</option>
+          <option>Gold</option>
+        </select>
+      </div>
+
+      <!-- Quantity -->
+      <div class="options">
+        <label>Quantity:</label>
+        <input type="number" value="1" min="1"/>
+      </div>
+
+      <!-- Buttons -->
+      <div class="action-buttons">
+        <button class="btn">Add to Cart</button>
+        <button class="btn buy-now">Buy Now</button>
+      </div>
+
+      <!-- Size Guide -->
+      <div class="size-guide">
+        <a href="#">View Size Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT TABS -->
+  <section class="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="details">Product Details</button>
+      <button class="tab-btn" data-tab="shipping">Shipping Info</button>
+      <button class="tab-btn" data-tab="returns">Return Policy</button>
+      <button class="tab-btn" data-tab="reviews">Customer Reviews</button>
+    </div>
+    <div class="tab-content active" id="details">
+      <p>This tee is made with premium cotton and designed to keep you looking sharp and feeling comfortable all day.</p>
+    </div>
+    <div class="tab-content" id="shipping">
+      <p>Shipping within Nigeria takes 2–5 business days. Express options available at checkout.</p>
+    </div>
+    <div class="tab-content" id="returns">
+      <p>You may return items within 7 days of delivery. See our Return Policy for full terms.</p>
+    </div>
+    <div class="tab-content" id="reviews">
+      <p>★ ★ ★ ★ ☆ — "Loved the quality and fit!"</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-cols">
+      <div>
+        <h4>About Us</h4>
+        <p>OLYLUX is a lifestyle brand redefining African fashion with bold elegance.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+          <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="assets/icons/tiktok.svg" alt="TikTok"></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 OLYLUX. All rights reserved.</p>
+  </footer>
+
+  <script src="js/product.js"></script>
+</body>
+</html>
