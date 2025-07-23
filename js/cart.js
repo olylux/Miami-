@@ -1,46 +1,69 @@
-const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-const cartList = document.querySelector(".cart-items");
-const subtotalBox = document.querySelector(".subtotal-amount");
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItemsContainer = document.querySelector(".cart-items");
+  const cartTotalElement = document.querySelector(".cart-total-price");
 
-function renderCart() {
-  cartList.innerHTML = "";
-  let subtotal = 0;
+  // Update Total Price
+  function updateCartTotal() {
+    const cartRows = document.querySelectorAll(".cart-row");
+    let total = 0;
 
-  cartItems.forEach((item, index) => {
-    subtotal += item.price * item.quantity;
-    const itemEl = document.createElement("div");
-    itemEl.classList.add("cart-item");
-    itemEl.innerHTML = `
-      <p><strong>${item.name}</strong></p>
-      <p>₦${item.price.toLocaleString()} x 
-        <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="qty-input" />
-      </p>
-      <button data-index="${index}" class="remove-btn">Remove</button>
-    `;
-    cartList.appendChild(itemEl);
+    cartRows.forEach(row => {
+      const priceElement = row.querySelector(".cart-price");
+      const quantityElement = row.querySelector(".cart-quantity-input");
+
+      const price = parseFloat(priceElement.innerText.replace("₦", "").replace(",", ""));
+      const quantity = parseInt(quantityElement.value);
+
+      total += price * quantity;
+    });
+
+    cartTotalElement.innerText = "₦" + total.toLocaleString();
+  }
+
+  // Remove Item From Cart
+  cartItemsContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-remove")) {
+      e.target.closest(".cart-row").remove();
+      updateCartTotal();
+    }
   });
 
-  subtotalBox.innerText = "₦" + subtotal.toLocaleString();
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-}
-
-cartList.addEventListener("input", (e) => {
-  if (e.target.classList.contains("qty-input")) {
-    const index = e.target.dataset.index;
-    const newQty = parseInt(e.target.value);
-    if (newQty >= 1) {
-      cartItems[index].quantity = newQty;
-      renderCart();
+  // Quantity Change
+  cartItemsContainer.addEventListener("input", (e) => {
+    if (e.target.classList.contains("cart-quantity-input")) {
+      const input = e.target;
+      if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1;
+      }
+      updateCartTotal();
     }
-  }
-});
+  });
 
-cartList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("remove-btn")) {
-    const index = e.target.dataset.index;
-    cartItems.splice(index, 1);
-    renderCart();
-  }
-});
+  // Example: Adding item to cart (You can call this from another page if needed)
+  function addItemToCart(title, price, imageSrc) {
+    const cartRow = document.createElement("div");
+    cartRow.classList.add("cart-row");
 
-document.addEventListener("DOMContentLoaded", renderCart);
+    const cartItemContent = `
+      <div class="cart-item cart-column">
+        <img class="cart-item-image" src="${imageSrc}" width="100" height="100" />
+        <span class="cart-item-title">${title}</span>
+      </div>
+      <span class="cart-price cart-column">₦${price}</span>
+      <div class="cart-quantity cart-column">
+        <input class="cart-quantity-input" type="number" value="1" />
+        <button class="btn btn-remove">Remove</button>
+      </div>
+    `;
+
+    cartRow.innerHTML = cartItemContent;
+    cartItemsContainer.appendChild(cartRow);
+    updateCartTotal();
+  }
+
+  // Optional: Example call to add item (remove this in production)
+  // addItemToCart("Sample Shirt", "7500", "img/shirt.jpg");
+
+  // Update totals on page load
+  updateCartTotal();
+});
