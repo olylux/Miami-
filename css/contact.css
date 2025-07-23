@@ -1,0 +1,21 @@
+/* contact.css */
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.contact-container form button {
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
