@@ -35,7 +35,24 @@
   <main class="checkout-container">
     <h2>Secure Checkout</h2>
 
-    <form class="checkout-form">
+    <form id="checkout-form" class="checkout-form">
+  <div class="form-section">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="address">Shipping Address</label>
+    <textarea id="address" required></textarea>
+  </div>
+
+  <!-- Add more fields as needed -->
+
+  <button type="submit" class="place-order-btn">Place Order</button>
+  <p class="secure-note">🔒 Secure Checkout – Your data is safe with us</p>
+</form>
+    
       <!-- 🧾 Billing & Shipping Address -->
       <section class="form-section">
         <h3>Billing & Shipping Address</h3>
@@ -98,5 +115,6 @@
 
   <!-- ======= Scripts ======= -->
   <script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
 </body>
 </html>
