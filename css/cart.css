@@ -1,0 +1,28 @@
+/* cart.css */
+.cart-container {
+  padding: 20px;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.qty-input {
+  width: 60px;
+  padding: 5px;
+}
+
+.remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
