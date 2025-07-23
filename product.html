@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Olylux</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mens.html">Men</a></li>
+        <li><a href="womens.html">Women</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="new-arrivals.html">New Arrivals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="product-image">
+        <img src="images/sample-product.jpg" alt="Product Image" />
+      </div>
+      <div class="product-info">
+        <h1 class="product-title">Classic Black Hoodie</h1>
+        <p class="product-price">₦15,000</p>
+        <p class="product-description">
+          Experience top-quality comfort and timeless streetwear design with our
+          Classic Black Hoodie. Perfect for casual and chilly days.
+        </p>
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux Clothing Brand. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
