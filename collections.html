@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collections | Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/collections.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">OLYLUX</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html" class="active">Collections</a>
+      <a href="mens.html">Men's Wear</a>
+      <a href="womens.html">Women's Wear</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="sales.html">Sales & Offers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="collections-container">
+    <h1>Explore Our Collections</h1>
+    <div class="collections-grid">
+      <a href="mens.html" class="collection-card men">
+        <h2>Men's Wear</h2>
+      </a>
+      <a href="womens.html" class="collection-card women">
+        <h2>Women's Wear</h2>
+      </a>
+      <a href="new-arrivals.html" class="collection-card new">
+        <h2>New Arrivals</h2>
+      </a>
+      <a href="sales.html" class="collection-card sales">
+        <h2>Sales & Offers</h2>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Olylux. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
