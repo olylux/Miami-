@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Women's Collection - Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/collections.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Olylux</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mens.html">Men</a></li>
+        <li><a href="womens.html">Women</a></li>
+        <li><a href="new-arrivals.html">New Arrivals</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="collections">
+    <h1>Women's Collection</h1>
+    <div class="product-grid">
+      <!-- Sample Product -->
+      <div class="product-card">
+        <img src="images/women1.jpg" alt="Women's Fashion 1" />
+        <h3>Elegant Gown</h3>
+        <p>₦18,000</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/women2.jpg" alt="Women's Fashion 2" />
+        <h3>Stylish Blazer</h3>
+        <p>₦13,500</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/women3.jpg" alt="Women's Fashion 3" />
+        <h3>Luxury Ankara</h3>
+        <p>₦10,000</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
+
+      <div class="product-card">
+        <img src="images/women4.jpg" alt="Women's Fashion 4" />
+        <h3>Casual Jumpsuit</h3>
+        <p>₦15,000</p>
+        <a href="product.html" class="btn">View Product</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux Clothing Brand. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
