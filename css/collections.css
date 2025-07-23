@@ -1,15 +1,97 @@
 /* collections.css */
-.collections {
-  padding: 20px;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-.collections h2 {
+.collections-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.collections-container h1 {
   text-align: center;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 30px;
 }
 
+/* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-card .info {
+  padding: 15px 20px;
+}
+
+.product-card .info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.product-card .info p {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.product-card .info .price {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.product-card .info .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .info .btn:hover {
+  background-color: #f39c12;
+  color: #111;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .product-card img {
+    height: 240px;
+  }
 }
