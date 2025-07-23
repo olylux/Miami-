@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Olylux</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mens.html">Men</a></li>
+        <li><a href="womens.html">Women</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-section">
+    <h1>About Olylux</h1>
+    <p>Olylux is a modern fashion brand dedicated to delivering stylish, comfortable, and affordable clothing for all. Our collections are designed to inspire confidence and elevate everyday looks.</p>
+
+    <section class="about-values">
+      <h2>Our Mission</h2>
+      <p>To empower individuality and self-expression through fashion.</p>
+
+      <h2>Our Story</h2>
+      <p>Founded with a passion for creativity and style, Olylux started as a local brand and quickly grew into a recognized name in fashion.</p>
+
+      <h2>Quality Promise</h2>
+      <p>Every product is crafted with care, precision, and love. We prioritize quality, durability, and style.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux Clothing Brand. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
