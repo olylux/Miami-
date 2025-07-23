@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - Olylux</title>
+  <link rel="stylesheet" href="css/checkout.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="checkout-header">
+    <h1>OLYLUX</h1>
+    <p>Secure Checkout</p>
+  </header>
+
+  <main class="checkout-container">
+    <section class="checkout-section">
+      <h2>Billing & Shipping Address</h2>
+      <form class="form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="text" placeholder="Phone Number" required />
+        <input type="text" placeholder="Address Line 1" required />
+        <input type="text" placeholder="Address Line 2" />
+        <input type="text" placeholder="City" required />
+        <input type="text" placeholder="State/Province" required />
+        <input type="text" placeholder="Postal Code" required />
+        <input type="text" placeholder="Country" required />
+      </form>
+    </section>
+
+    <section class="checkout-section">
+      <h2>Delivery Options</h2>
+      <label><input type="radio" name="delivery" checked /> Standard (3-5 Days)</label><br />
+      <label><input type="radio" name="delivery" /> Express (1-2 Days)</label>
+    </section>
+
+    <section class="checkout-section">
+      <h2>Payment Methods</h2>
+      <label><input type="radio" name="payment" checked /> Credit / Debit Card</label><br />
+      <label><input type="radio" name="payment" /> PayPal</label><br />
+      <label><input type="radio" name="payment" /> Pay on Delivery</label>
+    </section>
+
+    <div class="checkout-buttons">
+      <a href="cart.html" class="btn secondary">Back to Cart</a>
+      <button class="btn primary">Place Order</button>
+    </div>
+  </main>
+
+  <footer class="checkout-footer">
+    <p>© 2025 Olylux. All rights reserved. | Secure Checkout 🔒</p>
+  </footer>
+</body>
+</html>
