@@ -174,3 +174,66 @@ document.addEventListener("DOMContentLoaded", () => {
     enableSwipe();
   }
 });
+
+// ================================
+//  Live Search Functionality
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector(".search-bar input");
+  const searchResultsContainer = document.createElement("div");
+  searchResultsContainer.classList.add("search-results");
+  searchInput.parentNode.appendChild(searchResultsContainer);
+
+  // Sample products array (you can replace with real data or fetch from backend later)
+  const products = [
+    "OLYLUX Men’s Denim Jacket",
+    "OLYLUX Women’s Crop Top",
+    "OLYLUX Classic T-Shirt",
+    "OLYLUX Leather Bag",
+    "OLYLUX Sports Sneakers",
+    "OLYLUX Hooded Sweatshirt",
+    "OLYLUX Elegant Dress",
+    "OLYLUX Bomber Jacket",
+    "OLYLUX Sandals",
+    "OLYLUX Beaded Bracelet",
+    "OLYLUX Unisex Cap"
+  ];
+
+  // Event listener for live input
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    searchResultsContainer.innerHTML = "";
+
+    if (query.trim() === "") {
+      searchResultsContainer.style.display = "none";
+      return;
+    }
+
+    const filtered = products.filter(product =>
+      product.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+      searchResultsContainer.innerHTML = "<div>No products found</div>";
+    } else {
+      filtered.forEach(product => {
+        const div = document.createElement("div");
+        div.textContent = product;
+        div.addEventListener("click", () => {
+          searchInput.value = product;
+          searchResultsContainer.style.display = "none";
+        });
+        searchResultsContainer.appendChild(div);
+      });
+    }
+
+    searchResultsContainer.style.display = "block";
+  });
+
+  // Hide results if clicked outside
+  document.addEventListener("click", (e) => {
+    if (!searchInput.contains(e.target) && !searchResultsContainer.contains(e.target)) {
+      searchResultsContainer.style.display = "none";
+    }
+  });
+});
