@@ -1,0 +1,14 @@
+/* thankyou.css */
+.thankyou-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.thankyou-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.thankyou-container p {
+  font-size: 1.1rem;
+}
