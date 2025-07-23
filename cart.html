@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart – OLYLUX</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">OLYLUX</h1>
+      <div class="menu-icon">&#9776;</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men's Wear</a></li>
+          <li><a href="#">Women's Wear</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sales & Offers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart">
+    <section class="container">
+      <h2>Your Cart</h2>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="images/product1.jpg" alt="Urban Fit Tee">
+          <div class="item-details">
+            <h3>Urban Fit Tee</h3>
+            <p>Size: M | Color: Black</p>
+            <p>₦12,000</p>
+            <label>Quantity:
+              <input type="number" value="1" min="1">
+            </label>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </div>
+        <!-- Repeat cart-item block for multiple items -->
+      </div>
+
+      <div class="cart-summary">
+        <h3>Subtotal: ₦12,000</h3>
+        <div class="cart-buttons">
+          <a href="index.html" class="btn">Continue Shopping</a>
+          <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>OLYLUX is a bold and modern fashion brand for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="returns.html">Returns</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <p>Instagram | Twitter | Facebook</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
