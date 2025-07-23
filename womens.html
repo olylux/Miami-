@@ -1,0 +1,46 @@
+<!-- womens.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Women's Wear | Olylux</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Olylux</h1>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="mens.html">Men's Wear</a>
+      <a href="womens.html">Women's Wear</a>
+      <a href="new-arrivals.html">New Arrivals</a>
+      <a href="sales.html">Sales & Offers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="collection-section">
+      <h2>👗 Women's Collection</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="img/womens1.jpg" alt="Women's Dress">
+          <h3>Floral Gold Dress</h3>
+          <p>₦18,500</p>
+          <a href="product.html" class="btn">View</a>
+        </div>
+        <!-- Add more -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
