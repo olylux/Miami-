@@ -273,3 +273,67 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =========================
+   Hero Banner Slide Styles
+   ========================= */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background-color: #87ceeb; /* Sky blue background */
+}
+
+/* Slide container for each banner */
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-color: skyblue;
+  color: #111;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Slide indicators (dots) */
+.slide-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slide-indicators span {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff88;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-indicators span.active {
+  background-color: #fff;
+}
+
+/* Optional swipe support for mobile */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 200px;
+  }
+
+  .slide {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+}
