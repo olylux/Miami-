@@ -41,8 +41,9 @@
 
   <!-- Search Section -->
   <section class="search-bar">
-    <input type="text" placeholder="Search for products..." />
-    <button>🔍 Search</button>
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button onclick="performSearch()">🔍 Search</button>
+    <div id="searchResults" class="search-results"></div>
   </section>
 
   <!-- Product Section -->
