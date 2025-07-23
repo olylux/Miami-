@@ -2,55 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout - Olylux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olylux | Checkout</title>
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/checkout.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header class="checkout-header">
-    <h1>OLYLUX</h1>
-    <p>Secure Checkout</p>
+
+  <!-- ======= Header ======= -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">OLYLUX</h1>
+      <nav class="navbar">
+        <div class="menu-icon" id="menu-toggle">☰</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men's Wear</a></li>
+          <li><a href="#">Women's Wear</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sales & Offers</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- ======= Checkout Main ======= -->
   <main class="checkout-container">
-    <section class="checkout-section">
-      <h2>Billing & Shipping Address</h2>
-      <form class="form">
+    <h2>Secure Checkout</h2>
+
+    <form class="checkout-form">
+      <!-- 🧾 Billing & Shipping Address -->
+      <section class="form-section">
+        <h3>Billing & Shipping Address</h3>
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email Address" required />
         <input type="text" placeholder="Phone Number" required />
-        <input type="text" placeholder="Address Line 1" required />
-        <input type="text" placeholder="Address Line 2" />
+        <input type="text" placeholder="Street Address" required />
         <input type="text" placeholder="City" required />
         <input type="text" placeholder="State/Province" required />
-        <input type="text" placeholder="Postal Code" required />
+        <input type="text" placeholder="Zip/Postal Code" required />
         <input type="text" placeholder="Country" required />
-      </form>
-    </section>
+      </section>
 
-    <section class="checkout-section">
-      <h2>Delivery Options</h2>
-      <label><input type="radio" name="delivery" checked /> Standard (3-5 Days)</label><br />
-      <label><input type="radio" name="delivery" /> Express (1-2 Days)</label>
-    </section>
+      <!-- 🚚 Delivery Options -->
+      <section class="form-section">
+        <h3>Delivery Options</h3>
+        <label><input type="radio" name="delivery" checked /> Standard Delivery - 3-5 Days</label>
+        <label><input type="radio" name="delivery" /> Express Delivery - 1-2 Days</label>
+      </section>
 
-    <section class="checkout-section">
-      <h2>Payment Methods</h2>
-      <label><input type="radio" name="payment" checked /> Credit / Debit Card</label><br />
-      <label><input type="radio" name="payment" /> PayPal</label><br />
-      <label><input type="radio" name="payment" /> Pay on Delivery</label>
-    </section>
+      <!-- 💳 Payment Methods -->
+      <section class="form-section">
+        <h3>Payment Methods</h3>
+        <label><input type="radio" name="payment" checked /> Credit/Debit Card</label>
+        <label><input type="radio" name="payment" /> PayPal</label>
+        <label><input type="radio" name="payment" /> Bank Transfer</label>
+      </section>
 
-    <div class="checkout-buttons">
-      <a href="cart.html" class="btn secondary">Back to Cart</a>
-      <button class="btn primary">Place Order</button>
-    </div>
+      <!-- ✅ Place Order Button -->
+      <div class="form-buttons">
+        <a href="cart.html" class="btn">Back to Cart</a>
+        <button type="submit" class="btn">Place Order</button>
+      </div>
+    </form>
   </main>
 
-  <footer class="checkout-footer">
-    <p>© 2025 Olylux. All rights reserved. | Secure Checkout 🔒</p>
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+        <a href="#">Returns & Refunds</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+      <div class="newsletter">
+        <p>Sign up and get 10% off your next order</p>
+        <input type="email" placeholder="Enter your email" />
+        <button class="btn">Subscribe</button>
+      </div>
+      <div class="social-icons">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">X (Twitter)</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- ======= Scripts ======= -->
+  <script src="js/main.js"></script>
 </body>
 </html>
