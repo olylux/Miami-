@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - Olylux</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/thankyou.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Olylux</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mens.html">Men</a></li>
+        <li><a href="womens.html">Women</a></li>
+        <li><a href="new-arrivals.html">New Arrivals</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-container">
+    <h1>Thank You for Your Purchase! 🎉</h1>
+    <p>Your order has been received and is now being processed.</p>
+    <p>We’ll send you a confirmation email shortly with tracking info.</p>
+    <a href="index.html" class="btn">Back to Home</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Olylux Clothing Brand. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
