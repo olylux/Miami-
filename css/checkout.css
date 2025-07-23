@@ -1,0 +1,113 @@
+/* ========== CHECKOUT PAGE STYLES ========== */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-header {
+  background: #000;
+  color: #f1c40f;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.checkout-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: 900;
+}
+
+.checkout-header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.checkout-container {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.checkout-section {
+  margin-bottom: 40px;
+}
+
+.checkout-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #002147;
+}
+
+.form input[type="text"],
+.form input[type="email"] {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  font-size: 1.1em;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  padding: 14px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn.primary {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background-color: #d4ac0d;
+}
+
+.btn.secondary {
+  background-color: #002147;
+}
+
+.btn.secondary:hover {
+  background-color: #00162f;
+}
+
+.checkout-footer {
+  text-align: center;
+  background-color: #000;
+  color: #ccc;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+}
